@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medjed — Développement logiciel, outils sur mesure & automatisation</title>
+  <meta name="description" content="Medjed : outils sur mesure, automatisation, traitement de données et créations Python. Code propre, fiable, livré prêt à l'emploi.">
+  <meta name="theme-color" content="#0d0f12">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 3c-6 0-9 5-9 11v15l3-3 3 3 3-3 3 3 3-3 3 3V14c0-6-3-11-9-11z' fill='%23e2b857'/%3E%3Crect x='11' y='12' width='3' height='4' fill='%230d0f12'/%3E%3Crect x='18' y='12' width='3' height='4' fill='%230d0f12'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <!-- Logo Medjed (suaire géométrique, deux yeux, détail terminal) réutilisable via <use> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="medjed" viewBox="0 0 48 48">
+      <path d="M24 3C14 3 9 11 9 21v22l5-4 5 4 5-4 5 4 5-4 5 4V21C39 11 34 3 24 3z" fill="none" stroke="var(--gold)" stroke-width="2.2" stroke-linejoin="round"/>
+      <path d="M15 18h18v8H15z" fill="var(--bg)"/>
+      <rect x="17" y="20" width="5" height="4" fill="var(--cyan)"/>
+      <rect x="26" y="20" width="5" height="4" fill="var(--cyan)"/>
+      <rect x="18.5" y="21" width="1.6" height="2" fill="var(--bg)"/>
+      <rect x="27.5" y="21" width="1.6" height="2" fill="var(--bg)"/>
+      <text x="24" y="36" text-anchor="middle" font-family="monospace" font-size="7" fill="var(--gold)">&gt;_</text>
+    </symbol>
+  </svg>
+
+  <a class="skip" href="#main">Aller au contenu</a>
+
+  <header class="nav">
+    <div class="wrap nav-in">
+      <a class="brand" href="#top" aria-label="Medjed, accueil">
+        <svg class="logo" aria-hidden="true"><use href="#medjed"/></svg>
+        <span>Medjed</span>
+      </a>
+      <nav aria-label="Navigation principale">
+        <ul>
+          <li><a href="#projets">Projets</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#profil">Profil</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a class="gh" href="https://github.com/calvinlechat" target="_blank" rel="noopener">GitHub ↗</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero wrap" id="top">
+      <div class="hero-text">
+        <p class="eyebrow">Développement logiciel · Automatisation · Python</p>
+        <h1>Des outils sur mesure, <span class="gold">fiables</span> et prêts à l'emploi.</h1>
+        <p class="lead">Medjed conçoit des utilitaires, des scripts d'automatisation et des créations ludiques en Python. Une approche rigoureuse, issue des mathématiques et de l'informatique : du code propre, vérifiable, sans dépendances superflues.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projets">Voir les projets</a>
+          <a class="btn" href="#contact">Me contacter</a>
+        </div>
+      </div>
+      <aside class="term" aria-label="Carte système">
+        <div class="term-bar"><i></i><i></i><i></i><span>medjed@sys ~</span></div>
+        <pre><code><span class="c">$</span> whoami
+<span class="g">medjed</span>
+<span class="c">$</span> status --short
+<span class="k">stack   </span> python · c · ocaml · web
+<span class="k">style   </span> propre, testé, sans bloat
+<span class="k">livrable</span> clé en main
+<span class="k">statut  </span> <span class="ok">● disponible</span>
+<span class="c">$</span> <span class="cur">_</span></code></pre>
+      </aside>
+    </section>
+
+    <div class="frieze" aria-hidden="true"></div>
+
+    <!-- PROJETS -->
+    <section class="wrap" id="projets">
+      <h2>Projets</h2>
+      <p class="sub">Une vitrine technique : des outils de traitement de données et des jeux Pyxel.</p>
+
+      <div class="filters" role="group" aria-label="Filtrer les projets">
+        <button class="chip active" data-filter="all" aria-pressed="true">Tous</button>
+        <button class="chip" data-filter="tools" aria-pressed="false">Outils &amp; Data</button>
+        <button class="chip" data-filter="games" aria-pressed="false">Jeux Python</button>
+      </div>
+
+      <div class="grid" id="grid">
+        <!-- ⚠️ Vérifie chaque lien : https://github.com/calvinlechat/<nom-du-repo> -->
+        <article class="card" data-cat="tools">
+          <h3>Analyseur &amp; Extracteur de Logs</h3>
+          <p>Parsing de fichiers de logs de parties, gestion des lignes anormales, calcul de métriques et export structuré.</p>
+          <ul class="tags"><li>Python</li><li>Regex</li><li>JSON/CSV</li><li>CLI</li></ul>
+          <p class="proves"><b>Démontre :</b> robustesse face aux données sales, bibliothèque standard seule.</p>
+          <a class="link" href="https://github.com/calvinlechat/game-log-analyzer" target="_blank" rel="noopener">Voir sur GitHub ↗</a>
+        </article>
+
+        <article class="card" data-cat="tools">
+          <h3>Générateur de Devis de Donjon</h3>
+          <p>Génération de devis avec validation stricte des entrées et rendu autonome en plusieurs formats.</p>
+          <ul class="tags"><li>Python</li><li>Decimal</li><li>HTML/Markdown</li><li>CLI</li></ul>
+          <p class="proves"><b>Démontre :</b> calculs financiers exacts, sans flottants.</p>
+          <a class="link" href="https://github.com/calvinlechat/donjon-devis" target="_blank" rel="noopener">Voir sur GitHub ↗</a>
+        </article>
+
+        <article class="card" data-cat="games">
+          <h3>Helmet Battle</h3>
+          <p>Jeu de combat par vagues avec boutique d'améliorations, touches configurables et sauvegarde sur fichier.</p>
+          <ul class="tags"><li>Python</li><li>Pyxel</li></ul>
+          <p class="proves"><b>Démontre :</b> boucle de jeu, état persistant, configuration utilisateur.</p>
+          <a class="link" href="https://github.com/calvinlechat/Helmet-Battle" target="_blank" rel="noopener">Voir sur GitHub ↗</a>
+        </article>
+
+        <article class="card" data-cat="games">
+          <h3>Forest Survival</h3>
+          <p>Jeu de survie en 2D développé en Python.</p>
+          <ul class="tags"><li>Python</li><li>Pyxel</li></ul>
+          <p class="proves"><b>Démontre :</b> conception de gameplay en pixel-art.</p>
+          <a class="link" href="https://github.com/calvinlechat/Forest-Survival" target="_blank" rel="noopener">Voir sur GitHub ↗</a>
+        </article>
+
+        <article class="card" data-cat="games">
+          <h3>Alien Apocalypse</h3>
+          <p>Jeu d'action arcade en 2D développé en Python.</p>
+          <ul class="tags"><li>Python</li><li>Pyxel</li></ul>
+          <p class="proves"><b>Démontre :</b> réactivité, collisions et rythme d'un jeu d'arcade.</p>
+          <a class="link" href="https://github.com/calvinlechat/Alien-Apocalypse" target="_blank" rel="noopener">Voir sur GitHub ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <div class="frieze" aria-hidden="true"></div>
+
+    <!-- SERVICES -->
+    <section class="wrap" id="services">
+      <h2>Ce que je propose</h2>
+      <p class="sub">Du concret, adapté à votre besoin réel.</p>
+      <div class="grid three">
+        <article class="card">
+          <h3>Automatisation &amp; données</h3>
+          <p>Tri, extraction et nettoyage de fichiers, génération de rapports et de documents. Moins de manipulations manuelles, plus de fiabilité.</p>
+        </article>
+        <article class="card">
+          <h3>Outils &amp; scripts sur mesure</h3>
+          <p>Utilitaires légers et fiables, livrés clés en main, avec une documentation courte pour les prendre en main sans effort.</p>
+        </article>
+        <article class="card">
+          <h3>Web &amp; logiciel</h3>
+          <p>Sites statiques rapides, prototypes propres et logique algorithmique rigoureuse.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="frieze" aria-hidden="true"></div>
+
+    <!-- PROFIL -->
+    <section class="wrap" id="profil">
+      <h2>Profil &amp; approche</h2>
+      <div class="profile">
+        <p>Étudiant en <b>Double Licence Informatique-Mathématiques à Nantes</b>. J'aime le code propre, vérifiable, et sans dépendances superflues : chaque outil doit faire ce qu'il annonce, et se tester facilement.</p>
+        <ul class="tags big" aria-label="Compétences">
+          <li>Python</li><li>C</li><li>OCaml</li><li>HTML/CSS/JS</li><li>Algorithmique</li><li>Automatisation</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="frieze" aria-hidden="true"></div>
+
+    <!-- CONTACT -->
+    <section class="wrap" id="contact">
+      <h2>Contact</h2>
+      <p class="sub">Un besoin, une idée ? Écrivez-moi.</p>
+      <div class="contact">
+        <a class="btn primary" href="mailto:medjed.dev@gmail.com" id="mail">medjed.dev@gmail.com</a>
+        <button class="btn" id="copy" type="button" data-email="medjed.dev@gmail.com">Copier l'adresse</button>
+        <a class="btn" href="https://github.com/calvinlechat" target="_blank" rel="noopener">GitHub ↗</a>
+        <span id="copy-status" class="status" role="status" aria-live="polite"></span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <span class="brand"><svg class="logo" aria-hidden="true"><use href="#medjed"/></svg> Medjed</span>
+      <span>© <span id="year">2026</span> Medjed · Hébergé sur GitHub Pages</span>
+    </div>
+  </footer>
+</body>
+</html>
